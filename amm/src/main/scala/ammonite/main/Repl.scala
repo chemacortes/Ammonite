@@ -22,7 +22,7 @@ class Repl(input: InputStream,
   val prompt = Ref("@ ")
 
   val colors = Ref[Colors](Colors.Default)
-  val frontEnd = Ref[FrontEnd](AmmoniteFrontEnd(Filter.empty))
+  val frontEnd = Ref[FrontEnd](ammonite.frontend.FrontEnd.JLineWindows)
 
   val printStream = new PrintStream(output, true)
   val errorPrintStream = new PrintStream(error, true)
